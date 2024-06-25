@@ -2,52 +2,52 @@
 
 >> ***Hoy vamos a hacer actividad en Python en un día como programadores:***
 
-**1.Abrir la terminal de Git Bash o terminal en Linux, debe ser como administrador en Window.**
+### **1.Abrir la terminal de Git Bash o terminal en Linux, debe ser como administrador en Window.**
 
-**2.Creamos una carpeta o directorio:**
+### **2.Creamos una carpeta o directorio:**
 
 ```sh
 mkdir python-final 
 ```
 
-**3.Entramos en ella:**
+### **3.Entramos en ella:**
 
 ```sh
 cd python-final 
 ```
 
-**4.Iniciamos el repositorio:**
+### **4.Iniciamos el repositorio:**
 
 ```sh
 git init 
 ```
 
-**5.Creamos un archivo:**
+### **5.Creamos un archivo:**
 
 ```sh
 touch finales.py 
 ```
 
-**6.Abrimos VSC:**
+### **6.Abrimos VSC:**
 
 ```sh
 code . 
 ```
 
-**7.En terminal ingresamos el comando para saber la versión de Python que tenemos instalada:**
+### **7.En terminal ingresamos el comando para saber la versión de Python que tenemos instalada:**
 
 ```sh
 python -V 
 python3 -V 
 ```
 
-**8.Creamos el entorno virtual en Python:**
+### **8.Creamos el entorno virtual en Python:**
 
 ```sh
 python3 -m venv venv #Creamos el entorno virtual 
 ```
 
-**9.Activamos el entorno virtual:**
+### **9.Activamos el entorno virtual:**
 
 ```sh
 source venv/bin/activate #Activamos el entorno virtual en Linux 
@@ -57,25 +57,27 @@ source venv/bin/activate #Activamos el entorno virtual en Linux
 venv/scripts/activate #En windows 
 ```
 
-**9.2.Para desactivar el entorno virtual:**
+### **9.2.Para desactivar el entorno virtual:**
 
 ```sh
 deactivate
 ```
 
-**10.Hacemos actualización del pip de Python:**
+### **10.Hacemos actualización del pip de Python:**
 
 ```sh
 python3 -m pip install --upgrade pip #Actualizamos el pip 
 ```
 
-**11.Investigar ¿Qué es el pip y porque lo actualizamos?**
+### **11.Investigar ¿Qué es el pip y porque lo actualizamos?**
+
+**<sub>[Documentacion oficial de Python](https://docs.python.org/es/3/tutorial/venv.html)</sub>**
 
 >> **pip** es el programa de instalación preferido. Desde Python 3.4 viene incluido por defecto con los instaladores binarios de Python.
 
-*Puede instalar, actualizar y eliminar paquetes usando un programa llamado pip. De forma predeterminada, pip instalará paquetes desde el Indice de Paquetes de Python. Puede navegar por el índice de paquetes de Python yendo a él en su navegador web.*
+*Puede instalar, actualizar y eliminar paquetes usando un programa llamado pip. De forma predeterminada, pip instalará paquetes desde el [Indice de Paquetes de Python](https://pypi.org/). Puede navegar por el índice de paquetes de Python yendo a él en su navegador web.*
 
-*pip tiene varios subcomandos: **«install», «uninstall», «freeze», etc**. (Consulte la guía Instalando módulos de Python para obtener la documentación completa de pip).*
+*pip tiene varios subcomandos: **«install», «uninstall», «freeze», etc**. (Consulte la guía [Instalando módulos de Python](https://docs.python.org/es/3/installing/index.html#installing-index) para obtener la documentación completa de pip).*
 
 Se puede instalar la última versión de un paquete especificando el nombre del paquete:
 
@@ -173,10 +175,41 @@ Installing collected packages: novas, numpy, requests
 Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
 ```
 
-**pip** tiene muchas más opciones. Consulte la guía Instalando módulos de Python para obtener documentación completa de pip. Cuando haya escrito un paquete y desee que esté disponible en el índice de paquetes de Python, consulte la Guía de usuario de empaquetado de Python.
+**pip** tiene muchas más opciones. Consulte la guía [Instalando módulos de Python](https://docs.python.org/es/3/installing/index.html#installing-index) para obtener documentación completa de pip. Cuando haya escrito un paquete y desee que esté disponible en el índice de paquetes de Python, consulte la [Guía de usuario de empaquetado de Python](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
 
 >> **Para finalizar, nos queda claro que Python trabaja con pip para sus entornos virtuales y la instalacion de paquetes de forma aislada. Se recomienda su uso para no tener demasiados paquetes intalados en nuestra computadora que despues no vamos a utilizar.**
 
-**12.Hacer al primer commit de este trabajo y unirlo al repositorio remoto.**
+#### ***Es importante actualizar pip en entornos virtuales!!!***
 
-**13.Enviar el enlace del repositorio remoto donde tiene que tener un README.md con todos los detalles de lo que les fui mostrando en comandos, y las respuesta del punto 11 de más arriba.**
+**1. Seguridad y correcciones de errores:**
+
+Al igual que cualquier software, pip recibe actualizaciones periódicas que corrigen errores de seguridad y vulnerabilidades. Mantener pip actualizado garantiza que tu entorno virtual esté protegido contra las últimas amenazas. Las actualizaciones también pueden incluir mejoras en el rendimiento y la estabilidad de pip.
+
+**2. Compatibilidad con paquetes nuevos y actualizados:**
+
+Los desarrolladores de paquetes de Python publican actualizaciones con frecuencia, que pueden introducir nuevas funciones, corregir errores o modificar la forma en que funciona el paquete. Para asegurarte de que tu entorno virtual pueda aprovechar estas nuevas versiones y funcionar correctamente con los paquetes más recientes, es fundamental mantener pip actualizado.
+
+**Consideraciones adicionales:**
+
+>> Independencia de los entornos virtuales: Actualizar pip en un entorno virtual no afecta a las instalaciones de pip en otros entornos virtuales o en la instalación global de Python. Esto te permite mantener diferentes versiones de pip para diferentes proyectos según sea necesario.
+Buenas prácticas: Se recomienda actualizar pip con regularidad, junto con las dependencias de tu proyecto. Esto ayuda a mantener un entorno de desarrollo seguro y estable.
+
+*En resumen, actualizar pip en entornos virtuales es crucial para mantener la seguridad, la compatibilidad y el buen funcionamiento de tus proyectos Python. Es una práctica sencilla que puede tener un impacto significativo en la confiabilidad y la longevidad de tu código.*
+
+**Aquí hay algunos comandos para actualizar pip en entornos virtuales:**
+
+Para actualizar pip a la última versión estable:
+
+```sh
+pip install --upgrade pip
+```
+
+Para ver qué versión de pip tienes instalada:
+
+```sh
+pip --version
+```
+
+### **12.Hacer al primer commit de este trabajo y unirlo al repositorio remoto.**
+
+### **13.Enviar el enlace del repositorio remoto donde tiene que tener un README.md con todos los detalles de lo que les fui mostrando en comandos, y las respuesta del punto 11 de más arriba.**
